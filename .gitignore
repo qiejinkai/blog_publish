@@ -1,0 +1,10 @@
+web/*
+
+WEB-INF/classes/applicationContext.xml
+WEB-INF/classes/log4j.properties
+WEB-INF/classes/hibernate.cfg.xml
+WEB-INF/classes/ehcache.xml
+WEB-INF/classes/base-servlet.xml
+WEB-INF/classes/settings.properties
+WEB-INF/classes/web.xml
+ueditor/config.json
