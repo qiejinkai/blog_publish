@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+	<display-name>Blog Project</display-name>
+
+
+	<!-- XSSFilter -->
+	<!-- <filter> <filter-name>XssFilter</filter-name> <filter-class>com.qjk.filter.XssFilter</filter-class> 
+		</filter> <filter-mapping> <filter-name>XssFilter</filter-name> <url-pattern>/*</url-pattern> 
+		</filter-mapping> -->
+
+
+
+	<!-- Spring MVC -->
+	<servlet>
+		<servlet-name>base</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:base-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>base</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>SpringEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SpringEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Durid Moniter -->
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>DruidWebStatFilter</filter-name>
+		<filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+		<init-param>
+			<param-name>exclusions</param-name>
+			<param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>DruidWebStatFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Spring -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+<!-- 	<welcome-file-list>
+		<welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
+	</welcome-file-list> -->
+
+	<!-- Spring Session -->
+	<filter>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>hibernateLazyFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>hibernateLazyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	
+	<filter>
+		<filter-name>adminLoginFilter</filter-name>
+		<filter-class>com.qjk.qblog.filter.AdminLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>adminLoginFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>adminLoginFilter</filter-name>
+		<url-pattern>/druid/*</url-pattern>
+	</filter-mapping>
+
+	<!-- me -->
+	<context-param>
+		<param-name>menuFileLocation</param-name>
+		<param-value>/menu/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>settingFileLocation</param-name>
+		<param-value>/setting/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>isInitData</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.qjk.qblog.listener.InitDataServletContextListener</listener-class>
+	</listener>
+	
+	<!-- Tag -->
+	<jsp-config>  
+        <taglib>  
+            <taglib-uri>/qjk/core</taglib-uri>  
+            <taglib-location>/WEB-INF/tags/qjk_core.tld</taglib-location>  
+        </taglib>  
+    </jsp-config> 
+    
+    <error-page>
+    	<error-code>404</error-code>
+    	<location>/WEB-INF/jsp/404.jsp</location>
+    </error-page>
+    <error-page>
+    	<error-code>400</error-code>
+    	<location>/WEB-INF/jsp/404.jsp</location>
+    </error-page>
+
+</web-app>
