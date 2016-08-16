@@ -21,6 +21,10 @@
             <a class="icon_1" href="/diary/">日记</a>
             <!--<a class="tit" href="">登录</a>-->
         </div>
+        <div class="m_menu_section">
+            <a class="icon_1" href="/message/">留言</a>
+            <!--<a class="tit" href="">登录</a>-->
+        </div>
     </div>
 </div>
 <script>
@@ -45,6 +49,10 @@
    				}
    				if (curr_href.indexOf("/about") == 0) {
    					title.text("关于我");
+   					return;
+   				}
+   				if (curr_href.indexOf("/message") == 0) {
+   					title.text("留言");
    					return;
    				}
     			

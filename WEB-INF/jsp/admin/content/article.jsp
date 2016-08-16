@@ -63,7 +63,7 @@
 										<td>${article.hidden == 0 ?'显示':'隐藏' }</td>
 										<td>${article.homeShow == 0 ?'不展示':'展示'}</td>
 										<td>${article.pv }</td>
-										<td><qjk:fmt type="datetime" format="yyyy-MM-dd HH:mm:ss"
+										<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
 												src="${article.ctime}" /></td>
 										<td><a href="/admin/content/article/${article.articleId}/${article.group.groupId}/set">编辑</a>
 											<a href="/admin/content/article/${article.articleId}/${article.group.groupId}/delete">删除</a>

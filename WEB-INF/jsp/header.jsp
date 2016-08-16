@@ -11,7 +11,7 @@
 		<a href="/diary"><span>日记</span><span class="en">Life</span></a> 
 		<a href="/mood"><span>说说</span><span class="en">Doing</span></a> 
 		<a href="#"><span>专题</span><span class="en">Share</span></a>
-		<a href="#"><span>留言版</span>
+		<a href="/message"><span>留言板</span>
 		<span class="en">Gustbook</span></a>
 	</nav>
 	<script type="text/javascript">
