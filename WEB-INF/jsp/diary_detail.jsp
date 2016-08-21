@@ -9,8 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>郄金凯个人博客网站―梦想路上狂奔的一条疯狗</title>
-<meta name="keywords" content="个人博客,郄金凯" />
-<meta name="description" content="郄金凯个人博客网站―梦想路上狂奔的一条疯狗" />
+<meta name="keywords" content="个人博客,郄金凯,小幸运,${article.title}" />
+<meta name="description" content="小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗" />
 <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
 <link href="/home/css/base.css" rel="stylesheet">
 <link href="/home/css/template.css" rel="stylesheet">
@@ -152,7 +152,7 @@
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
-									<a href="http://yangqq.duoshuo.com/login/weixin/" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
+									<a href="#" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
 								</li>
 								</ul>
 						</div>

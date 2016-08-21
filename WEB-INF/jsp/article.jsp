@@ -37,8 +37,8 @@
 				<p class="dateview">
 					<span><qjk:fmt type="datetime" format="yyyy-MM-dd HH:mm:ss"
 							src="${article.ctime}" /> </span><span>作者：${article.author }</span><span>个人博客：[<a
-						href="/article/${article.group.groupId}">${article.group.name}</a>]<span>阅读：${article.pv}</span>
-					</span>
+						href="/article/${article.group.groupId}">${article.group.name}</a>]
+					</span><span>阅读：${article.pv}</span>
 				</p>
 			<figure>
 				<img src="${article.image }">

@@ -43,7 +43,8 @@
 			</div> -->
 		</section>
 	</div>
-	<div class="template" style="display: none">
+	<c:if test="${!empty infomationList }">
+	<div class="template" style="display:">
 		<div class="box">
 			<h3>
 				<p>
@@ -51,21 +52,14 @@
 				</p>
 			</h3>
 			<ul>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/01.jpg"></a><span>仿新浪博客风格・梅――古典个人博客模板</span></li>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/02.jpg"></a><span>黑色质感时间轴html5个人博客模板</span></li>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/03.jpg"></a><span>Green绿色小清新的夏天-个人博客模板</span></li>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/04.jpg"></a><span>女生清新个人博客网站模板</span></li>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/02.jpg"></a><span>黑色质感时间轴html5个人博客模板</span></li>
-				<li><a href="/" target="_blank"><img
-						src="/home/images/03.jpg"></a><span>Green绿色小清新的夏天-个人博客模板</span></li>
+				<c:forEach items="${infomationList }" var="infomation">
+				<li><a href="${infomation.link }" target="_blank"><img
+						src="${infomation.image }"></a><span>${infomation.title }</span></li>
+				</c:forEach>
 			</ul>
 		</div>
 	</div>
+	</c:if>
 	<article>
 		<h2 class="title_tj">
 			<p>

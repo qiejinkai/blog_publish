@@ -59,26 +59,16 @@
     <!-- sign begin-->
 
     <!-- 人气精选 -->
-    <c:if test="${!empty subjectlist }">
+    <c:if test="${!empty infomationList }">
 	    <div class="swiper-container  swiper2">
 	
 	        <div class="swiper-wrapper">
+	        	<c:forEach items="${infomationList }" var="infomation">
 	            <div class="swiper-slide">
-	                <h2>1</h2>
-	                <img src="../m/img/item_img.jpg">
+	                <h2>${infomation.title }</h2>
+	               <a href="${infomation.link }"><img src="${infomation.image }"/></a>
 	            </div>
-	            <div class="swiper-slide">
-	                <h2>2</h2>
-	                <img src="../m/img/item_img.jpg">
-	            </div>
-	            <div class="swiper-slide">
-	                <h2>3</h2>
-	                <img src="../m/img/item_img.jpg">
-	            </div>
-	            <div class="swiper-slide">
-	                <h2>4</h2>
-	                <img src="../m/img/item_img.jpg">
-	            </div>
+	            </c:forEach>
 	        </div>
 	    </div>
     </c:if>
