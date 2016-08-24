@@ -51,9 +51,8 @@
 							<tr>
 								<td><input type="text" class="ui-input rp" name="code"
 									value="" required style="width: 190px; display: inline-block;" />
-									<img height="36px" width="120px" src="
-									style="
-									display: inline-block; vertical-align: middle;" /></td>
+									<img height="36px" width="120px" src=""
+									style="display: inline-block; vertical-align: middle;" /></td>
 							</tr>
 						</tbody>
 						<tfoot>

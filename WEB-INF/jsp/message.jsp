@@ -88,13 +88,13 @@
 				<c:if test="${empty user }">
 				<div class="ds-login-buttons">
 					<p>社交帐号登录:</p>
-						<div class="ds-social-links">
+<!-- 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
 									<a href="#" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
 								</li>
 								</ul>
-						</div>
+						</div> -->
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
@@ -106,7 +106,7 @@
 				</c:if>
 				<div class="ds-replybox">
 				<a class="ds-avatar">
-					<img src="${empty user?'https://avatar.duoshuo.com/avatar-50/587/39630.jpg':user.logo }" alt="">
+					<img src="${empty user?'/img/default.jpg':user.logo }" alt="">
 				</a>
 				<a id="in" href="javascript:;"></a>
 					<form id="messageForm" method="post" action="/message/create" onsubmit="return false;">
