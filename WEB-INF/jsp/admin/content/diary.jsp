@@ -47,6 +47,7 @@
 												src="${article.ctime}" /></td>
 										<td><a href="/admin/content/diary/${article.articleId}/set">编辑</a>
 											<a href="/admin/content/diary/${article.articleId}/delete">删除</a>
+											<a href="/admin/content/diary/${article.articleId}/messages/1">评论</a>
 											<a href="/admin/content/diary/${article.articleId}/hidden">${article.hidden == 0 ?'隐藏':'取消隐藏'}</a>
 										</td>
 									</tr>

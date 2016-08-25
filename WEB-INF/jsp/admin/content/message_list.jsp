@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>用户管理</title>
+<title>文章管理</title>
 <%@include file="../css.html"%>
 <%@include file="../script.html"%>
 </head>
@@ -18,14 +18,25 @@
 		<jsp:include page="../toolbar.jsp"></jsp:include>
 		<div class="ef-block">
 
-			<h1>留言管理</h1>
-			<p class="txt">可在此查看平台留言</p>
+
+			<h1>
+			<c:if test="${article.alias eq 'article'}">
+				<a href="/admin/content/${article.alias }/${article.group.groupId}/1">${article.alias eq 'article'?'文章':'日记'}管理</a>
+			</c:if>
+			<c:if test="${article.alias != 'article'}">
+				<a href="/admin/content/${article.alias }/1">${article.alias eq 'article'?'文章':'日记'}管理</a>
+			</c:if>
+				
+				<span class="icon-angle-right"></span>
+					查看 ${article.title} 评论
+			</h1>
+			<p class="txt">查看评论</p>
 
 
 			<div class="content">
 
 				<div class="container">
-				<form id="search" action="/admin/user/message/1/" method="get">
+				<form id="search" action="/admin/content/${article.alias}/${article.articleId}/messages/1/" method="get">
 					<table class="ui-searchbar">
 						<thead>
 							<tr>
@@ -36,7 +47,7 @@
 						<tbody>
 							<tr>
 								<td>
-									<input type="text" class="ui-input" name="keywords" value="${keywords }"  placeholder="内容"/>
+									<input type="text" class="ui-input" name="keywords" value="${keywords }"  placeholder="昵称"/>
 								</td>
 								
 								<td>
@@ -52,15 +63,21 @@
 						var form = $("#search");
 						$("input[type=button]",form).bind('click',function(){
 							var keywords = $("input[name='keywords']",form).val();
-							var action = $(form).attr("action");
+							var action =$(form).attr("action");
+							if(action.substring(action.length-1) == "/"){
+								action = action+keywords;
+							}else{
+								action = action+"/"+keywords;
+							}
 							
-							action = action+keywords;
+							
 							
 							window.location.href=action;
 						});
 					});
 				
 				</script>
+
 					<c:if test="${not empty pager }">
 						<table class="ui-table" style="table-layout: fixed;width:100%">
 							<thead>
@@ -95,7 +112,7 @@
 										</td>
 									</tr>
 								</c:forEach>
-								<qjk:pager columnSize="7" value="pager" url="/admin/user/message/{pageIndex}/${keywords}" />
+								<qjk:pager columnSize="7" value="pager" url="/admin/content/${article.alias}/${article.articleId}/messages/{pageIndex}/${keywords}"/>
 
 							</tbody>
 						</table>

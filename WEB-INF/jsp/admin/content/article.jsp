@@ -67,6 +67,7 @@
 												src="${article.ctime}" /></td>
 										<td><a href="/admin/content/article/${article.articleId}/${article.group.groupId}/set">编辑</a>
 											<a href="/admin/content/article/${article.articleId}/${article.group.groupId}/delete">删除</a>
+											<a href="/admin/content/article/${article.articleId}/messages/1">评论</a>
 											<a href="/admin/content/article/${article.articleId}/${article.group.groupId}/hidden">${article.hidden == 0 ?'隐藏':'取消隐藏'}</a>
 											<a href="/admin/content/article/${article.articleId}/${article.group.groupId}/homeshow">${article.homeShow == 0 ?'首页展示':'取消展示'}</a>
 										</td>
