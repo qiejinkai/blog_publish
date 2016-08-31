@@ -8,6 +8,6 @@
         <a href="/article/">新闻资讯</a> -->
     </p>
     	
-    <p><span>Design by Qiejinkai <a href=""
-				target="_blank">com.qiejinkai</a> <a href="/">首页</a></span></p>
+    <p><span>Design by Qiejinkai <a href="/"
+				target="_blank">京ICP备16044432号-1 </a></span></p>
 </div>
