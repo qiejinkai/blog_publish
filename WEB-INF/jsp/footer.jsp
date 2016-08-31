@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 	<footer>
 		<p>
-			Design by Qiejinkai <a href="/"
-				target="_blank">京ICP备16044432号-1 </a>
+			Design by Qiejinkai <a href=""
+				target="_blank">com.qiejinkai</a> <a href="/">首页</a>
 		</p>
 	</footer>
