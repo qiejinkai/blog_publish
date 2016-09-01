@@ -136,10 +136,18 @@
 				<c:if test="${empty user }">
 				<div class="ds-login-buttons">
 					<p>社交帐号登录:</p>
+					
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
-									<a href="http://yangqq.duoshuo.com/login/weixin/" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
+									<a href="#" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
+								</li>
+								</ul>
+						</div>
+						<div class="ds-social-links">
+							<ul class="ds-service-list">
+								<li>
+									<a href="#" rel="nofollow" class="ds-service-link ds-qq">QQ</a>
 								</li>
 								</ul>
 						</div>

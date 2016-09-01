@@ -98,6 +98,14 @@
 								</li>
 								</ul>
 						</div>
+						
+						<div class="ds-social-links">
+							<ul class="ds-service-list">
+								<li>
+									<a href="#" rel="nofollow" class="ds-service-link ds-qq">QQ</a>
+								</li>
+								</ul>
+						</div>
 				</div>
 				</c:if>
 				<div class="ds-replybox">
