@@ -88,6 +88,8 @@ $(function() {
 		
 		var loop = setInterval(function() {     
 		    if(A.closed) {    
+
+				$.tip("登录成功", true);
 		        window.location.reload();  
 		    }    
 		}, 1000); 

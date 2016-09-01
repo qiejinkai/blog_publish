@@ -155,7 +155,7 @@
 				</c:if>
 				<div class="ds-replybox">
 				<a class="ds-avatar">
-					<img src="${empty user?'https://avatar.duoshuo.com/avatar-50/587/39630.jpg':user.logo }" alt="">
+					<img src="${empty user?'/img/default.jpg':user.logo }" alt="">
 				</a>
 				<a id="in" href="javascript:;"></a>
 					<form id="messageForm" method="post" action="/message/create" onsubmit="return false;">
