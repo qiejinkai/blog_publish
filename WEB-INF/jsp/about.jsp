@@ -7,14 +7,16 @@
 <meta charset="utf-8">
 <title>小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗</title>
 <meta name="keywords" content="小幸运，个人博客,郄金凯" />
-<meta name="description" content="小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗" />
+<meta name="description" content="小幸运-关于我-郄金凯个人博客网站―梦想路上狂奔的一条疯狗" />
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no, minimal-ui">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="author" content="郄金凯,qiejinkai@126.com">
 <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
 <link href="/home/css/base.css" rel="stylesheet">
 <link href="/home/css/about.css" rel="stylesheet">
 <script type="text/javascript" src="/js/jquery.mini.js"></script>
-<!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
 <link href='http://fonts.googleapis.com/css?family=Architects+Daughter'
 	rel='stylesheet' type='text/css'>
 </head>

@@ -8,18 +8,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗</title>
-<meta name="keywords" content="小幸运，个人博客,郄金凯,${article.title }" />
-<meta name="description" content="小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗" />
-
+<title>小幸运-${article.title }</title>
+<meta name="keywords" content="小幸运,个人博客,郄金凯,${article.tags }" />
+<meta name="description" content="小幸运-文章-${article.title }" />
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no, minimal-ui">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="author" content="郄金凯,qiejinkai@126.com">
 <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
 <link href="/home/css/base.css" rel="stylesheet">
 <link href="/home/css/template.css" rel="stylesheet">
 <link href="/home/css/message.css" rel="stylesheet">
 <script type="text/javascript" src="/js/jquery.mini.js"></script>
-<!--[if lt IE 9]>
-<script src="js/modernizr.js"></script>
-<![endif]-->
 <script src="/js/jquery.tip.js"
 	type="text/javascript"></script>
 <script src="/ueditor/third-party/SyntaxHighlighter/shCore.js"
