@@ -5,7 +5,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>小幸运-郄金凯个人博客网站―梦想路上狂奔的一条疯狗</title>
@@ -49,8 +49,8 @@
                 <div class="item_share">
                     <a class="left">阅读：${article.pv }</a>
                     <a class="detail" >作者：${article.author }</a>
-                    <a class="right r1" href='#'></a>
-                </div>
+                     <a class="right r1 wb" href='#' title="小幸运-${article.title }" pic="${article.image }" uri = "/article/detail/${article.articleId }"></a>
+              </div>
             </div>           
             <div class="item_bottom">
                 <div class="item_share">
@@ -65,7 +65,7 @@
     </div> 
 
 </div>
-
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 <a class="top_back" style="display: ;"></a>
 <script>
     $(window).scroll(function(){
@@ -159,9 +159,11 @@
     		return str;
     		
     	}
-    });
+    	
+    	 });
 </script>
 
+	<script type="text/javascript" src="/mobile/js/wbshare.js"></script>
 <%@include file="m_footer.jsp" %>
 
 </body>

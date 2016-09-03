@@ -50,8 +50,8 @@
                 <div class="item_share">
                     <a class="left">阅读：${article.pv }</a>
                     <a class="detail" >作者：${article.author }</a>
-                    <a class="right r1" href='#'></a>
-                </div>
+                   <a class="right r1 wb" href='#' title="小幸运-${article.title }" pic="${article.image }" uri = "/article/detail/${article.articleId }"></a>
+              </div>
             </div>           
             <div class="item_bottom">
                 <div class="item_share">
@@ -164,6 +164,7 @@
     });
 </script>
 
+	<script type="text/javascript" src="/mobile/js/wbshare.js"></script>
 <%@include file="m_footer.jsp" %>
 
 </body>
