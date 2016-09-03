@@ -1,7 +1,7 @@
 $(function(){
      	$(".wb").on('click',function(){
      		var a = $(this);
-     		var domain = window.location.host;
+     		var domain = "http://"+window.location.host;
       		var uri = a.attr("uri");
      		var appkey = 668417419;
      		var title = a.attr("title");
