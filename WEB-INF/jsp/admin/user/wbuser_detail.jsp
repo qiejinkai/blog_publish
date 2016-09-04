@@ -118,7 +118,7 @@
 							</tr>
 							<tr>
 								<td>个人主页</td>
-								<td><a href="${user.persion_host }" target="_blank">${user.wbUser.persion_host }</a></td>
+								<td><a href="${user.person_host }" target="_blank">${user.person_host }</a></td>
 							</tr>
 							<tr>
 								<td>最近登录</td>

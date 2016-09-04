@@ -25,7 +25,7 @@
 			<div class="content">
 
 				<div class="container">
-				<form id="search" action="/admin/user/wxusers/1/" method="get">
+				<form id="search" action="/admin/user/wbusers/1/" method="get">
 					<table class="ui-searchbar">
 						<thead>
 							<tr>
