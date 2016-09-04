@@ -3,7 +3,7 @@
 	<title>新浪微博</title>
 	<summary></summary>
 	<name>weibo</name>
-	<version>1.0.4</version>
+	<version>1.0.6</version>
 	<types></types>
 	<indexId>5</indexId>
 	<option>
@@ -23,11 +23,11 @@
 		<name>api_code</name>
 		<value>https://api.weibo.com/oauth2/authorize?client_id={appid}&amp;redirect_uri={redirect_uri}&amp;response_type=code&amp;scope={scope}&amp;state={state}&amp;display=default</value>
 		<title>获取code</title>
-	</option
+	</option>
 	<option>
 		<summary>获取code 手机端</summary>
 		<name>api_code_mobile</name>
-		<value>https://api.weibo.com/oauth2/authorize?client_id={appid}&amp;redirect_uri={redirect_uri}&amp;response_type=code&amp;scope={scope}&amp;state={state}&amp;display=mobile</value>
+		<value>https://open.weibo.cn/oauth2/authorize?client_id={appid}&amp;redirect_uri={redirect_uri}&amp;response_type=code&amp;scope={scope}&amp;state={state}&amp;display=mobile</value>
 		<title>获取code</title>
 	</option>		
 	<option>
