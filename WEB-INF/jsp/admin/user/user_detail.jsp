@@ -202,8 +202,12 @@
 								<td>${user.wbUser.nick }</td>
 							</tr>
 							<tr>
+								<td>所在地区</td>
+								<td>${user.wbUser.location }</td>
+							</tr>
+							<tr>
 								<td>个人主页</td>
-								<td><a href="${user.wbUser.location }" target="_blank">${user.wbUser.location }</a></td>
+								<td><a href="${user.wbUser.persion_host }" target="_blank">${user.wbUser.persion_host }</a></td>
 							</tr>
 							<tr>
 								<td>最近登录</td>
