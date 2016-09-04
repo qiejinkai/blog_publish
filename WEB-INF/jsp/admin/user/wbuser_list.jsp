@@ -18,14 +18,14 @@
 		<jsp:include page="../toolbar.jsp"></jsp:include>
 		<div class="ef-block">
 
-			<h1>用户查询</h1>
-			<p class="txt">可在此查看平台用户</p>
+			<h1>新浪微博用户查询</h1>
+			<p class="txt">可在此查看通过新浪微博快捷登录用户</p>
 
 
 			<div class="content">
 
 				<div class="container">
-				<form id="search" action="/admin/user/users/1/" method="get">
+				<form id="search" action="/admin/user/wxusers/1/" method="get">
 					<table class="ui-searchbar">
 						<thead>
 							<tr>
@@ -67,11 +67,9 @@
 							<thead>
 								<tr>
 									<td width="40px">头像</td>
-									<td width="40px">ID</td>
+									<td width="40px">WBID</td>
 									<td>昵称</td>
-									<td>QQ用户</td>
-									<td>微信用户</td>
-									<td>新浪微博用户</td>
+									<td>平台用户</td>
 									<td width="100px">加入时间</td>
 									<td width="100px">登陆时间</td>
 									<td width="180px">操作</td>
@@ -81,36 +79,20 @@
 								<c:forEach items="${pager.list }" var="user">
 									<tr>
 										<td><img src="${user.logo }" style="width: 40px; height: 40px;"></td>
-										<td>${user.uid}</td>
+										<td>${user.wbid}</td>
 										<td>${user.nick}</td>
-										<c:if test="${!empty user.qqUser }">
-											<td><a href="/admin/user/qqusers/${user.qqUser.qqid }/detail">查看</a></td>
-										</c:if>
-										<c:if test="${empty user.qqUser }">
-											<td>无</td>
-										</c:if>
-										<c:if test="${!empty user.wxUser }">
-											<td><a href="/admin/user/wxusers/${user.wxUser.wxid }/detail">查看</a></td>
-										</c:if>
-										<c:if test="${empty user.wxUser }">
-											<td>无</td>
-										</c:if>
-										<c:if test="${!empty user.wbUser }">
-											<td><a href="/admin/user/wbusers/${user.wbUser.wbid }/detail">查看</a></td>
-										</c:if>
-										<c:if test="${empty user.wbUser }">
-											<td>无</td>
-										</c:if>
+										<td><a href="/admin/user/users/${user.user.uid }/detail">查看</a></td>
+										
 										<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
 												src="${user.ctime}" /></td>
 										<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
 												src="${user.loginTime}" /></td>
 										<td>
-											<a href="/admin/user/users/${user.uid }/detail">查看</a>
+											<a href="/admin/user/wbusers/${user.wbid }/detail">查看</a>
 										</td>
 									</tr>
 								</c:forEach>
-								<qjk:pager columnSize="9" value="pager" />
+								<qjk:pager columnSize="7" value="pager" />
 
 							</tbody>
 						</table>

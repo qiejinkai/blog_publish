@@ -152,6 +152,13 @@
 								</li>
 								</ul>
 						</div>
+						<div class="ds-social-links">
+							<ul class="ds-service-list">
+								<li>
+									<a href="/wbuser/login/?r=/diary/detail/${article.articleId }" rel="nofollow" class="ds-service-link ds-wb">微博</a>
+								</li>
+								</ul>
+						</div>
 				</div>
 				</c:if>
 				<div class="ds-replybox">

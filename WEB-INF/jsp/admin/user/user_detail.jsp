@@ -179,6 +179,52 @@
 							</tr>
 						</tbody>
 						</c:if>
+						
+						<c:if test="${!empty user.wbUser }">
+						<thead>
+							<tr>
+								<td colspan="2"><a href="/admin/user/wbusers/${user.wbUser.wbid }/detail">新浪微博用户信息</a></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>OpenId</td>
+								<td>${user.wbUser.openid }</td>
+							</tr>
+							<tr>
+								<td>头像</td>
+								<td><img width="80px"  src="${user.wbUser.logo }"/>
+
+								</td>
+							</tr>
+							<tr>
+								<td>昵称</td>
+								<td>${user.wbUser.nick }</td>
+							</tr>
+							<tr>
+								<td>个人主页</td>
+								<td><a href="${user.wbUser.location }" target="_blank">${user.wbUser.location }</a></td>
+							</tr>
+							<tr>
+								<td>最近登录</td>
+								<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
+												src="${user.wbUser.loginTime}" /></td>
+							</tr>
+							<tr>
+								<td>上次登录</td>
+								<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
+												src="${user.wbUser.lastLoginTime}" /></td>
+							</tr>
+							<tr>
+								<td>最近登录ip</td>
+								<td>${user.wbUser.loginIp}</td>
+							</tr>
+							<tr>
+								<td>上次登录ip</td>
+								<td>${user.wbUser.lastLoginIp}</td>
+							</tr>
+						</tbody>
+						</c:if>
 
 					</table>
 
