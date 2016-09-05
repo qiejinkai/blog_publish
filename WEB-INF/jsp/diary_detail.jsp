@@ -177,6 +177,20 @@
 						</div>
 				</div>
 				</c:if>
+				
+				<c:if test="${!empty user }">
+				<div class="ds-login-buttons">
+					<p>当前登陆用户:<span style="color:red;cursor:pointer">${user.nick }</span></p>
+						<div class="ds-social-links">
+							<ul class="ds-service-list">
+								<li>
+									<a href="/logout/?r=/message" >退出</a>
+								</li>
+								</ul>
+						</div>
+						
+				</div>
+				</c:if>
 				<div class="ds-replybox">
 				<a class="ds-avatar">
 					<img src="${empty user?'/img/default.jpg':user.logo }" alt="">

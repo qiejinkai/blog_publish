@@ -95,7 +95,7 @@
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
-									<a href="/wxuser/login/?r=/message"" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
+									<a href="/wxuser/login/?r=/message" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
 								</li>
 								</ul>
 						</div>
@@ -114,6 +114,20 @@
 								</li>
 								</ul>
 						</div>
+				</div>
+				</c:if>
+				
+				<c:if test="${!empty user }">
+				<div class="ds-login-buttons">
+					<p>当前登陆用户:<span style="color:red;cursor:pointer">${user.nick }</span></p>
+						<div class="ds-social-links">
+							<ul class="ds-service-list">
+								<li>
+									<a href="/logout/?r=/message" >退出</a>
+								</li>
+								</ul>
+						</div>
+						
 				</div>
 				</c:if>
 				<div class="ds-replybox">
