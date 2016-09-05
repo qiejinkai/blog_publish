@@ -169,7 +169,7 @@
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
-									<a href="/logout/?r=/message" >退出</a>
+									<a href="/logout/?r=/article/detail/${article.articleId }" >退出</a>
 								</li>
 								</ul>
 						</div>
