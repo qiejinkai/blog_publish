@@ -141,7 +141,7 @@
 						<div class="ds-social-links">
 							<ul class="ds-service-list">
 								<li>
-									<a href="#" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
+									<a href="/wxuser/login/?r=/diary/detail/${article.articleId }" rel="nofollow" class="ds-service-link ds-weixin">微信</a>
 								</li>
 								</ul>
 						</div>
