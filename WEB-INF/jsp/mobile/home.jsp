@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="/mobile/css/com/head.css" />
  <link rel="stylesheet" type="text/css" href="/mobile/css/com/footer.css" />
 <link rel="stylesheet" type="text/css" href="/mobile/css/home.css" />
+<link rel="stylesheet" type="text/css" href="/mobile/css/banner/main.css" />
 <link rel="stylesheet" type="text/css" href="/mobile/css//swripe.min.css" />
 <link rel="stylesheet" type="text/css" href="/mobile/css//swripe.css">
 
@@ -30,8 +31,18 @@
 <body>
 <%@include file="m_header.jsp" %>
 
-<div class="wrap">
-	
+<div class="wrap" style="">
+		    <div class="header-photo" >
+			<div class="rotate-bar">
+				<a class="rotate-git" href="https://github.com/qiejinkai" target="_blank"><img
+					src="/home/images/github.jpg" /></a> <a class="rotate-wechat"
+					href="#weixin"><img src="/home/images/wechat.jpg" /></a>
+			</div>
+			<div class="rotate-bar1"></div>
+			<div class="rotate-bar2"></div>
+			<div class="rotate-bar3"></div>
+			<img class="rotate-photo" src="/home/images/photos.jpg">
+		</div>
 	<c:if test="${!empty bannerList }">
 
 	    <div class="slider">
@@ -45,6 +56,7 @@
 	        </ul>
 	        
 	        <ul class="slider_index"></ul>
+
 	    </div>
 	    <script>
 	        $(".slider").slide({
