@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>小幸运-${article.title }</title>
 <meta name="keywords" content="小幸运,个人博客,郄金凯,${article.tags }" />
-<meta name="description" content="小幸运-日记-${article.title }" />
+<meta name="description" content="${article.title }" />
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no, minimal-ui">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">

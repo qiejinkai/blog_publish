@@ -106,7 +106,7 @@
                 <div class="item_share">
                     <a class="left">阅读：${article.pv }</a>
                     <a class="detail" href="/">作者：${article.author }</a>
-                    <a class="right r1 wb" href='#' title="小幸运-${article.title }" pic="${article.image }" uri = "/article/detail/${article.articleId }"></a>
+                    <a class="right r1 wb" href='#' title="${article.title }" pic="${article.image }" uri = "/article/detail/${article.articleId }"></a>
                 </div>
             </div>
            

@@ -18,25 +18,25 @@
 		<jsp:include page="../toolbar.jsp"></jsp:include>
 		<div class="ef-block">
 
-			<h1>QQ用户查询</h1>
-			<p class="txt">可在此查看通过QQ快捷登录用户</p>
+			<h1>微信消息管理</h1>
+			<p class="txt">可在此查看微信消息</p>
 
 
 			<div class="content">
 
 				<div class="container">
-				<form id="search" action="/admin/user/qqusers/1/" method="get">
+				<form id="search" action="/admin/user/wxmessage/1/" method="get">
 					<table class="ui-searchbar">
 						<thead>
 							<tr>
-								<td>昵称</td>
+								<td>openId</td>
 								<td></td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>
-									<input type="text" class="ui-input" name="keywords" value="${keywords }"  placeholder="昵称"/>
+									<input type="text" class="ui-input" name="keywords" value="${keywords }"  placeholder="openId"/>
 								</td>
 								
 								<td>
@@ -52,7 +52,7 @@
 						var form = $("#search");
 						$("input[type=button]",form).bind('click',function(){
 							var keywords = $("input[name='keywords']",form).val();
-							var action = form.attr("action");
+							var action = $(form).attr("action");
 							
 							action = action+keywords;
 							
@@ -61,38 +61,34 @@
 					});
 				
 				</script>
-
 					<c:if test="${not empty pager }">
-						<table class="ui-table">
+						<table class="ui-table" style="table-layout: fixed;width:100%">
 							<thead>
 								<tr>
-									<td width="40px">头像</td>
-									<td width="40px">QQID</td>
-									<td>昵称</td>
-									<td>平台用户</td>
-									<td width="100px">加入时间</td>
-									<td width="100px">登陆时间</td>
-									<td width="180px">操作</td>
+									<td width="80px">FromUserName</td>
+									<td width="60px">MsgType</td>
+									<td>Content</td>
+									<td>Event</td>
+									<td >EventKey</td>
+									<td >CreateTime</td>
+									<td>操作</td>
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${pager.list }" var="user">
+								<c:forEach items="${pager.list }" var="message">
 									<tr>
-										<td><img src="${user.logo }" style="width: 40px; height: 40px;"></td>
-										<td>${user.qqid}</td>
-										<td>${user.nick}</td>
-										<td><a href="/admin/user/users/${user.user.uid }/detail">查看</a></td>
-										
-										<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
-												src="${user.ctime}" /></td>
-										<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
-												src="${user.loginTime}" /></td>
+										<td>${message.fromUserName }</td>
+										<td>${message.msgType}</td>
+										<td>${message.content}</td>
+										<td>${message.event}</td>
+										<td>${message.eventKey}</td>
+										<td>${message.createTime}</td>
 										<td>
-											<a href="/admin/user/qqusers/${user.qqid }/detail">查看</a>
+											<%-- <a href="/admin/user/users/${user.uid }/detail">查看</a> --%>
 										</td>
 									</tr>
 								</c:forEach>
-								<qjk:pager columnSize="7" value="pager" />
+								<qjk:pager columnSize="7" value="pager" url="/admin/user/wxmessage/{pageIndex}/${keywords}" />
 
 							</tbody>
 						</table>
