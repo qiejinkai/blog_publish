@@ -62,7 +62,7 @@
 				
 				</script>
 					<c:if test="${not empty pager }">
-						<table class="ui-table" style="table-layout: fixed;width:100%">
+						<table class="ui-table" style="width:100%">
 							<thead>
 								<tr>
 									<td width="80px">FromUserName</td>
