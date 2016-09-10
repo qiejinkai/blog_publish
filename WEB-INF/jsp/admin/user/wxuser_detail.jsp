@@ -117,6 +117,18 @@
 								<td>${user.nick }</td>
 							</tr>
 							<tr>
+								<td>地区</td>
+								<td>${user.country }-${user.province }-${user.city }</td>
+							</tr>
+							<tr>
+								<td>是否关注</td>
+								<td>${user.subcribe eq 0 ?'否':'是' }</td>
+							</tr>
+							<tr>
+								<td>关注时间</td><td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
+												src="${user.subscribeTime}" /></td>
+							</tr>
+							<tr>
 								<td>最近登录</td>
 								<td><qjk:fmt type="dateformat" format="yyyy-MM-dd HH:mm:ss"
 												src="${user.loginTime}" /></td>
